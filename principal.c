@@ -23,7 +23,7 @@ int main(){
   int dificultad;
   int *lives;
   int *vez;
-  char accion;
+ // char accion;
   int *lenguaje;
   lives=malloc(80*sizeof(int));
   *lives=100;
@@ -56,7 +56,7 @@ fscanf(stdin," %s", opcion);
 
  case SALIR: { //salir
 
-   do{
+  /* do{
      printf("\nEsta seguro de que desea salir? (s/n):");
      scanf(" %c", &accion);
 
@@ -68,8 +68,8 @@ fscanf(stdin," %s", opcion);
        error=1;
        break;
      }
-   }while(tolower(accion) == 'n');
-   break;
+   }while(tolower(accion) == 'n'); */
+   break; 
  }
 
  case JUGAR : {

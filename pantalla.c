@@ -9,18 +9,15 @@ void pantalla(){
   
 int asteriscos; 
 int linea_aste;
-  system("clear");
-  printf("\n");
+
   for(asteriscos=0; asteriscos<7; asteriscos++){
    
-    if(asteriscos<3 || asteriscos>=4 ){
-      printf("\t\t");
+    if(asteriscos<3 || asteriscos>=4 ){;
       for(linea_aste=0; linea_aste<80; linea_aste++){
 	printf("*");
       }
     }
-    else if(asteriscos==4){
-      printf("\t\t");
+    else if(asteriscos==3){
       for(linea_aste=0; linea_aste<66; linea_aste++){
 	if(linea_aste==32){
 	  printf("  MASTER MIND  ");
@@ -32,8 +29,8 @@ int linea_aste;
     }
     printf("\n");
   }
+  printf("\n");
 }
-
 
 int confirmar(char opcion){
 
@@ -54,7 +51,7 @@ int confirmar(char opcion){
 
 void menu_nguardar(int *idioma){
 
-  char *menu[3]={" \n 1) Jugar partida \n 2) Jugar partida de prueba \n 3) Establecer nivel de dificultad \n 4) Listar historial de partidas \n 6) Establecer idioma \n 0) Salir\n \nSiguiente operacion?: " , "\n 1) Xogar partida \n 2) Xogar partida de proba \n 3) Establecer nivel de dificultade \n 4) Listar historial de partidas \n 6) Establecer idioma \n 0) Sair\n \nSeguinte operacion?:", "\n 1) Play game \n 2) Play test game \n 3) Set skill level \n 4) List game history \n 6) Set language \n 0) Quit\n\nNext command?:"};
+  char *menu[3]={" \n 1) Jugar partida \n 2) Jugar partida de prueba \n 3) Establecer nivel de dificultad \n 4) Listar historial de partidas \n 6) Establecer idioma \n 0) Salir\n \n¿Siguiente operación?\n " , "\n 1) Xogar partida \n 2) Xogar partida de proba \n 3) Establecer nivel de dificultade \n 4) Listar historial de partidas \n 6) Establecer idioma \n 0) Saír\n \nSeguinte operación?\n", "\n 1) Play game \n 2) Play test game \n 3) Set skill level \n 4) List game history \n 6) Set language \n 0) Quit\n\nNext command?\n"};
 
   fprintf(stdout,"%s", menu[*idioma]);
 
@@ -64,7 +61,7 @@ void menu_nguardar(int *idioma){
 
 void menu_guardar(int *idioma){
 
-  char *menu[3]={" \n 1) Jugar partida \n 2) Jugar partida de prueba \n 3) Establecer nivel de dificultad \n 4) Listar historial de partidas \n 5) Guardar partida \n 6) Establecer idioma \n 0) Salir\n \nSiguiente operacion?: " , " \n 1) Xogar partida \n 2) Xogar partida de proba \n 3) Establecer nivel de dificultade \n 4) Listar historial de partidas \n 5) Gardar partida \n 6) Establecer idioma \n 0) Sair\n \nSeguinte operacion?:", "\n 1) Play game \n 2) Play test game \n 3) Set skill level \n 4) List game history \n 5) Save played game \n 6) Set language \n 0) Quit\n \nNext command?:"};
+  char *menu[3]={" \n 1) Jugar partida \n 2) Jugar partida de prueba \n 3) Establecer nivel de dificultad \n 4) Listar historial de partidas \n 5) Guardar partida \n 6) Establecer idioma \n 0) Salir\n \n¿Siguiente operación?\n " , " \n 1) Xogar partida \n 2) Xogar partida de proba \n 3) Establecer nivel de dificultade \n 4) Listar historial de partidas \n 5) Gardar partida \n 6) Establecer idioma \n 0) Saír\n \nSeguinte operación?:", "\n 1) Play game \n 2) Play test game \n 3) Set skill level \n 4) List game history \n 5) Save played game \n 6) Set language \n 0) Quit\n \nNext command?\n"};
 
   printf("%s", menu[*idioma]);
 

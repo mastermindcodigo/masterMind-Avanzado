@@ -12,9 +12,9 @@ void partida_normal(int oportunidades, char codigo[4], int *idioma){
 	
     FILE *txt1;
     txt1=fopen("partidas.txt","a+"); //ESCRITURA EN FICHERO DE LAS APUESTAS Y ACIERTOS.
-    fprintf(txt1,"Intentos: %i\n",iteraciones);
+    fprintf(txt1,"%i\n",iteraciones);
     //fprintf(txt1,"\n");
-    fprintf(txt1,"Puntos: %.2f\n",puntuacion);
+    fprintf(txt1,"%.2f\n",puntuacion);
     //fprintf(txt1,"\n");
     fclose(txt1);
   } 
@@ -126,14 +126,14 @@ void partida_normal(int oportunidades, char codigo[4], int *idioma){
 
   txt=fopen("partidas.txt","a+"); //GUARDADO EN FICHERO DEL CODIGO SECRETO Y COLOCACIÓN DE GUIONES.
   fprintf(txt,"------------\n");
-  fprintf(txt, "El codigo secreto es:");
+  //fprintf(txt, "El codigo secreto es:");
   for(indice1=0; indice1<4; indice1++){
     fprintf(txt,"%c",codigo[indice1]);
-  }
+  } 
   fprintf(txt,"\n");
   fclose(txt);
 
-  //YA TENEMOS CREADO EL CODIGO SECRETO
+  //YA TENEMOS CREADO  SECRETO
   do{
     ganar=0;
     perder=0;
@@ -186,17 +186,17 @@ void partida_normal(int oportunidades, char codigo[4], int *idioma){
     /*PASAMOS LA BATERÍA DE PRUEBAS PARA SABER SI EL CODIGO INTRODUCIDO ES CORRECTO*/
   
     //AHORA MIRAMOS LOS ELEMENTOS DEL CODIGO QUE SE ACERTARON O NO 
-    printf("El codigo secreto es: ");
+  /*  printf("El codigo secreto es: ");
     for(indice1=0; indice1<4; indice1++){
       printf("%c", codigo[indice1]);
     }
-  
+  */
     //printf("\nSu apuesta es: <");
     imprimir(8, idioma);
     for(indice1=0; indice1<4; indice1++){
       printf("%c", apuesta[indice1]);
     }
-    printf(">  <");
+    printf("  <");
  
 
     for(indice1=0; indice1<4; indice1++){
@@ -245,9 +245,9 @@ void partida_normal(int oportunidades, char codigo[4], int *idioma){
       apuesta_final[indice1+contimpresion]='_';
     }
     contimpresion=0; //Ponemos contador a 0 para la siguiente ejecución de la impresión de salida.
-    printf(">"); //ACABAMOS DE COMPROBAR LA APUESTA CON EL CODIGO
+    printf(">\n"); //ACABAMOS DE COMPROBAR LA APUESTA CON EL CODIGO
     oportunidades--;    //QUITAMOS UN INTENTO
-    printf(" Quedan %i", oportunidades); 
+  //  printf(" Quedan %i", oportunidades); 
     intentos++;
     
     txt=fopen("partidas.txt","a+"); //ESCRITURA EN FICHERO DE LAS APUESTAS Y ACIERTOS.

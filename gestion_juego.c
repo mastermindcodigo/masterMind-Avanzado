@@ -46,7 +46,7 @@ int jugar_partida(int modo, int *lifes, int *lengua){
   else{ //PARTIDA DE PRUEBA 
   
     char codigo_p[4]="1234";  
-    int oportunidades=100;
+    int oportunidades=*lifes;
     partida_normal(oportunidades, codigo_p, lengua);  
   }
   return 0;
@@ -68,7 +68,7 @@ int establecer_nivel(int error, int *lifes, int *lengua){
       modo=0;
     }
     else{
-      //printf("\nNivel seleccionado no válido\n");
+      //printf("\nNivel seleccionado no vÃÂÃÂ¡lido\n");
       imprimir(21, lengua);
       modo=1; 
     }
@@ -101,7 +101,7 @@ void guardar_partida(){
 void idioma(int *lengua){
 
 
-  char *idioma[3]={" 0) Espa�ol \n 1) Gallego \n 2) Ingles\n\n  Elige idioma:"," 0) Espa�ol \n 1) Galego \n 2) Ingles\n\n  Elixe idioma:"," 0) Spanish \n 1) Galician \n 2) Ingles\n\n  Select language:"};
+  char *idioma[3]={" \n 0) Español \n 1) Gallego \n 2) Inglés\n\n  Elige idioma:"," 0) Español \n 1) Galego \n 2) Inglés\n\n  Elixe idioma:"," 0) Spanish \n 1) Galician \n 2) English \n\n  Select language:"};
 
   printf("%s", idioma[*lengua]);
   scanf(" %i", lengua);
